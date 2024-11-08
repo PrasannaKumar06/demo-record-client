@@ -13,7 +13,7 @@ class App extends Component {
   constructor() {
     super();
 
-    this.server = process.env.REACT_APP_API_URL || '';
+    this.server = process.env.REACT_APP_BACKEND_URL;
     this.socket = io(this.server);
 
     this.state = {
@@ -71,14 +71,6 @@ class App extends Component {
   }
 
   render() {
-    let peopleOnline = this.state.online - 1;
-    let onlineText = "";
-
-    if (peopleOnline < 1) {
-      onlineText = 'No one else is online';
-    } else {
-      onlineText = peopleOnline > 1 ? `${this.state.online - 1} people are online` : `${this.state.online - 1} person is online`;
-    }
 
     return (
       <div>
@@ -103,7 +95,6 @@ class App extends Component {
             server={this.server}
             socket={this.socket}
           />
-          <em id='online'>{onlineText}</em>
           <TableUser
             onUserUpdated={this.handleUserUpdated}
             onUserDeleted={this.handleUserDeleted}
