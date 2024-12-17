@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend-deploy
 spec:
-  replicas: 4
+  replicas: 6
   selector:
     matchLabels:
       app: cloud-frontend
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: cloud-frontend
-          image: registry.digitalocean.com/cloud-aat/frontend:1.0.1
+          image: registry.digitalocean.com/cloud-aat/frontend:1.0.2
           ports:
           - containerPort: 3000

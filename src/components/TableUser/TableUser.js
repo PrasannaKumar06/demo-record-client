@@ -21,7 +21,7 @@ class TableUser extends Component {
             headerTitle='Edit User'
             buttonTriggerTitle='Edit'
             buttonSubmitTitle='Save'
-            buttonColor='pink'
+            buttonColor='blue'
             userID={user._id}
             onUserUpdated={this.props.onUserUpdated}
             server={this.props.server}
