@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: cloud-frontend
-          image: registry.digitalocean.com/cloud-aat/frontend:1.0.2
+          image: 
           ports:
           - containerPort: 3000
